@@ -20,6 +20,14 @@ $(function () {
     $(".navbar-collapse").removeClass("show");
   });
 
+  //Animate the scroll to top
+  $('.back-to-top').on('click', function (event) {
+    event.preventDefault();
+    $('html, body').animate({
+      scrollTop: 0,
+    }, 1500);
+  });
+
   //=====  Rating selection
   var $star_rating = $('.star-rating .fa');
   var SetRatingStar = function () {
