@@ -20,6 +20,18 @@ $(function () {
     $(".navbar-collapse").removeClass("show");
   });
 
+  //=====  Slick testimonial active 
+  $('.testimonial-active').slick({
+    dots: false,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    infinite: true,
+    speed: 600,
+    slidesToShow: 1,
+    arrows: false,
+    adaptiveHeight: true,
+  });
+
   //====== Magnific Popup 
   $('.Video-popup').magnificPopup({
     type: 'iframe'
