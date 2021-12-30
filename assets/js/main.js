@@ -20,6 +20,32 @@ $(function () {
     $(".navbar-collapse").removeClass("show");
   });
 
+  //=====  Slick Showcase active 
+  $('.showcase-active').slick({
+    dots: false,
+    infinite: true,
+    speed: 600,
+    slidesToShow: 1,
+    arrows: true,
+    prevArrow: '<span class="prev"><i class="lni-arrow-left"></i></span>',
+    nextArrow: '<span class="next"><i class="lni-arrow-right"></i></span>',
+    adaptiveHeight: true,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          arrows: false,
+        }
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          arrows: false,
+        }
+      }
+    ]
+  });
+
   //=====  Slick testimonial active 
   $('.testimonial-active').slick({
     dots: false,
