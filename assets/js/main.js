@@ -20,6 +20,47 @@ $(function () {
     $(".navbar-collapse").removeClass("show");
   });
 
+  //=====  Slick product items active 
+  $('.product-items-active').slick({
+    dots: false,
+    infinite: true,
+    speed: 600,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    adaptiveHeight: true,
+    arrows: true,
+    prevArrow: '<span class="prev"><i class="lni-chevron-left"></i></span>',
+    nextArrow: '<span class="next"><i class="lni-chevron-right"></i></span>',
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 3,
+        }
+      },
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 2,
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          arrows: false,
+        }
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 1,
+          arrows: false,
+        }
+      }
+    ]
+  });
+
   //=====  Slick Showcase active 
   $('.showcase-active').slick({
     dots: false,
