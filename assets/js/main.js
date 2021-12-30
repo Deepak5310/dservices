@@ -20,6 +20,12 @@ $(function () {
     $(".navbar-collapse").removeClass("show");
   });
 
+  //===== One Page Nav 
+  $('#nav').onePageNav({
+    filter: ':not(.external)',
+    currentClass: 'active',
+  });
+
   //=====  Slick
   function mainSlider() {
     var BasicSlider = $('.slider-active');
