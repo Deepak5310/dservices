@@ -20,6 +20,16 @@ $(function () {
     $(".navbar-collapse").removeClass("show");
   });
 
+  //===== Sticky 
+  $(window).on('scroll', function (event) {
+    var scroll = $(window).scrollTop();
+    if (scroll < 10) {
+      $(".header-area").removeClass("sticky");
+    } else {
+      $(".header-area").addClass("sticky");
+    }
+  });
+
   //===== One Page Nav 
   $('#nav').onePageNav({
     filter: ':not(.external)',
