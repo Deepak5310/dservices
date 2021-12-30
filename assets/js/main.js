@@ -20,6 +20,12 @@ $(function () {
     $(".navbar-collapse").removeClass("show");
   });
 
+  //====== Magnific Popup 
+  $('.Video-popup').magnificPopup({
+    type: 'iframe'
+    // other options
+  });
+
   //===== Back to top
   // Show or hide the sticky footer button
   $(window).on('scroll', function (event) {
