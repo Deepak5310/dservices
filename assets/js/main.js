@@ -20,6 +20,30 @@ $(function () {
     $(".navbar-collapse").removeClass("show");
   });
 
+  //=====  Slick
+  function mainSlider() {
+    var BasicSlider = $('.slider-active');
+    BasicSlider.on('init', function (e, slick) {
+      var $firstAnimatingElements = $('.single-slider:first-child').find('[data-animation]');
+      doAnimations($firstAnimatingElements);
+    });
+    BasicSlider.on('beforeChange', function (e, slick, currentSlide, nextSlide) {
+      var $animatingElements = $('.single-slider[data-slick-index="' + nextSlide + '"]').find('[data-animation]');
+      doAnimations($animatingElements);
+    });
+    BasicSlider.slick({
+      autoplay: true,
+      autoplaySpeed: 5000,
+      dots: true,
+      fade: true,
+      arrows: false,
+      responsive: [
+        { breakpoint: 767, settings: { dots: false, arrows: false } }
+      ]
+    });
+  }
+  mainSlider();
+
   //=====  Slick product items active 
   $('.product-items-active').slick({
     dots: false,
